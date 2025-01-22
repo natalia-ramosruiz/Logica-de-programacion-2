@@ -1,5 +1,6 @@
 body {
     font-family: Georgia, serif;
+    font-style: italic;
     text-align: center;
     margin: 0;
     height: 100vh;
@@ -20,7 +21,7 @@ h1 {
 
 h1:hover {
     transform: scale(1.1);
-    color: #ae00ff; 
+    color: #1100ff; 
 }
 
 p {
@@ -41,9 +42,11 @@ input {
 
 button {
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-family: Georgia, serif;
+    font-style: italic;
     color: white;
-    background-color: #ff5e62;
+    background-color: #4caf50;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -51,7 +54,7 @@ button {
 }
 
 button:hover {
-    background-color: #ff9966;
+    background-color: #45a049; 
 }
 
 button:disabled {

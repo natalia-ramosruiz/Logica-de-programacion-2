@@ -13,17 +13,25 @@ function convertirTemperatura() {
         return; // Salir de la función si no es un número
     }
 
+    // Cambiar el fondo dinámicamente según la temperatura
+    const body = document.body;
+    if (celsius < 13) {
+        body.style.background = "linear-gradient(to bottom, #292994, #87ceeb)"; // Azul frío
+    } else {
+        body.style.background = "linear-gradient(to bottom, #ff9966, #ff5e62)"; // Naranja cálido
+    }
+
     // Deshabilitar el botón al hacer clic
     boton.disabled = true;
 
     // Realizar las conversiones
     const fahrenheit = (celsius * 9/5) + 32;
-    const kelvin = celsius + 273.15;
+    const kelvins = celsius + 273.15;
 
     // Mostrar los resultados en el DOM
     const resultado = `
-        Grados Kelvin: ${kelvin.toFixed(2)}<br>
-        Grados Fahrenheit: ${fahrenheit.toFixed(2)}
+        Grados Fahrenheit: ${fahrenheit.toFixed(2)}<br>
+        Kelvins: ${kelvins.toFixed(2)}
     `;
     document.getElementById("resultado").innerHTML = resultado;
 
